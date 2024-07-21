@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account Details Form</title>
+<link rel="stylesheet" href="payment-verify.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Account Details Form</h2>
+    <div class="qr-code">
+        <!-- Placeholder for QR code image -->
+        <img src="../images/payment-qr.jpg" alt="QR Code">
+        <p>Scan QR to Pay</p>
+    </div>
+    <form id="accountForm" method="post" enctype="multipart/form-data" action="../backend/paymentform.php" onsubmit="submitForm()">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br><br>
+        
+        <label for="accountHolder">Account Holder Name:</label>
+        <input type="text" id="accountHolder" name="accountHolder" required><br><br>
+        
+        <label for="contactNo">Contact Number:</label>
+        <input type="tel" id="contactNo" name="contactNo" required><br><br>
+        
+        <label for="fileUpload">Upload Image:</label>
+        <input type="file" id="fileUpload" name="fileUpload" accept="image/*" required><br><br>
+
+        <p>Read <a href="#" onclick="showTerms()">Terms and Conditions</a> before submitting the form</p>
+        
+        <button  type="submit">Submit</button>
+    </form>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

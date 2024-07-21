@@ -1,0 +1,89 @@
+/* Navbar Styles */
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #348de0;
+    color: #fff;
+    padding: 10px 100px;
+    position: sticky;
+    margin: 20px;
+    z-index: 1;
+    }
+
+    .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    font-size: 50px;
+    }
+
+
+    .navbar .logo {
+    display: flex;
+    align-items: center;
+    }
+
+    .navbar .logo img {
+    height: 150px;
+    margin-right: 10px;
+    }
+
+
+    .details-container span {
+        margin: 0 10px;
+        font-size: 25px;
+        padding-left: 30px;
+    }
+
+    .label {
+        font-weight: bold;
+        font-size: 20px;
+        
+    }
+
+    .syllabus{
+        margin: 20px;
+        background-color: antiquewhite;
+        position: sticky;
+    }
+    .syllabus h1{
+        text-align: center;
+        padding: 20px;
+    }
+
+    .collapsible {
+        background-color: antiquewhite;
+        color: black;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 20px;
+      }
+      
+      .collapsible i{
+        color: red;
+        font-size: 30px;
+        padding: 10px;
+        justify-content: center;
+      }
+      .active, .collapsible:hover {
+        background-color: antiquewhite;
+      }
+      
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+        font-size: 20px;
+      }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <div class="box" onclick="location.href='quiz.html';">
+            <h2>Take Quiz</h2>
+        </div>
+        <div class="box" onclick="location.href='practice.html';">
+            <h2>Practice Questions</h2>
+        </div>
+        <div class="box" onclick="location.href='compiler.html';">
+            <h2>Compiler</h2>
+        </div>
+    </div>
+
+    <script>
+        const backgroundAnimation = document.querySelector('.background-animation');
+
+        // Create different shapes
+        for (let i = 0; i < 10; i++) {
+            const shape = document.createElement('div');
+            shape.classList.add('shape');
+
+            // Randomly assign a shape type
+            const shapeType = Math.floor(Math.random() * 3); // 0, 1, or 2
+            if (shapeType === 0) {
+                shape.classList.add('circle');
+            } else if (shapeType === 1) {
+                shape.classList.add('square');
+            } else {
+                shape.classList.add('triangle');
+            }
+
+            // Set random position
+            shape.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+            shape.style.top = Math.random() * 100 + 'vh'; // Random vertical position
+
+            backgroundAnimation.appendChild(shape);
+        }
+    </script>
+</body>
+</html>

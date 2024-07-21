@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrollbars */
+    position: relative;
+}
+
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place behind other content */
+}
+
+.shape {
+    position: absolute;
+    opacity: 0.8;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(76, 175, 80, 0.7);
+    animation: moveCircle 10s linear infinite;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 87, 34, 0.7);
+    animation: moveSquare 8s linear infinite;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid rgba(33, 150, 243, 0.7);
+    animation: moveTriangle 12s linear infinite;
+}
+
+@keyframes moveCircle {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(200px, 100px); }
+    50% { transform: translate(100px, 300px); }
+    75% { transform: translate(-100px, 150px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes moveSquare {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-150px, 200px); }
+    50% { transform: translate(200px, 100px); }
+    75% { transform: translate(50px, -150px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes moveTriangle {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(100px, 50px); }
+    50% { transform: translate(-50px, 200px); }
+    75% { transform: translate(150px, 100px); }
+    100% { transform: translate(0, 0); }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between boxes */
+}
+
+.box {
+    background-color: #fff;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.box:hover {
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.7);
+    transform: scale(1.05); /* Slightly enlarge the box */
+}
+
+h2 {
+    color: #4CAF50;
+}
